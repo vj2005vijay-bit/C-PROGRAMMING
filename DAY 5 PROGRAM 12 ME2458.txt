@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+    int n, num;
+    int positiveCount = 0, negativeCount = 0, zeroCount = 0;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+    printf("Enter %d integers:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &num);
+        if (num > 0)
+            positiveCount++;
+        else if (num < 0)
+            negativeCount++;
+        else
+            zeroCount++;
+    }
+    printf("\nPositive numbers: %d\n", positiveCount);
+    printf("Negative numbers: %d\n", negativeCount);
+    printf("Zeroes: %d\n", zeroCount);
+    return 0;
+}
