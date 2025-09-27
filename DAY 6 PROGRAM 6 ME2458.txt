@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <ctype.h>
+int main() {
+    char str[100];
+    char upper[100], lower[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+    for (int i = 0; str[i] != '\0'; i++) {
+        upper[i] = toupper(str[i]);
+    }
+    for (int i = 0; str[i] != '\0'; i++) {
+        lower[i] = tolower(str[i]);
+    }
+    printf("Uppercase: %s", upper);
+    printf("Lowercase: %s", lower);
+    return 0;
+}
